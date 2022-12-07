@@ -10,6 +10,7 @@ import UIKit
 class PersonMovieTableViewCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var movieImage: UIImageView!
+    @IBOutlet weak var background: UIView!
     @IBOutlet weak var descriptions: UILabel!
     @IBOutlet weak var votesCount: UILabel!
     @IBOutlet weak var popularity: UILabel!
@@ -17,6 +18,7 @@ class PersonMovieTableViewCell: UITableViewCell {
     var urlImage = "https://image.tmdb.org/t/p/w500"
     
     func configPersonMovieCell(_ personMovie: KnowFor?) {
+        background.layer.cornerRadius = 30
         title.text = personMovie?.title ?? ""
         descriptions.text = personMovie?.overview ?? ""
         popularity.text = String(personMovie?.popularity ?? 0)

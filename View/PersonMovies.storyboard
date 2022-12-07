@@ -140,7 +140,7 @@
                                                             </constraints>
                                                         </imageView>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.83165919779999997" green="0.5801681876" blue="0.9096110463" alpha="0.79477959440000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.1066748574" green="0.63205219589999995" blue="0.36764955980000003" alpha="0.61152214400000005" colorSpace="custom" customColorSpace="displayP3"/>
                                                     <constraints>
                                                         <constraint firstItem="Uhb-pE-9Q5" firstAttribute="top" secondItem="qL3-uh-Icg" secondAttribute="bottom" constant="14" id="2aO-Cc-oOV"/>
                                                         <constraint firstItem="8ge-hR-6RE" firstAttribute="leading" secondItem="ueA-ki-Gyb" secondAttribute="leading" constant="8" id="3fb-X6-gSZ"/>
@@ -172,6 +172,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="background" destination="ueA-ki-Gyb" id="zom-1q-Vcw"/>
                                             <outlet property="dateLabel" destination="ZNF-2L-pGJ" id="N5r-SC-hJN"/>
                                             <outlet property="descriptions" destination="Uhb-pE-9Q5" id="Y3O-ao-6S5"/>
                                             <outlet property="movieImage" destination="8ge-hR-6RE" id="O78-dW-emL"/>
@@ -198,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kPo-2j-Wqu" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2105" y="736"/>
+            <point key="canvasLocation" x="2104.6153846153848" y="735.78199052132697"/>
         </scene>
     </scenes>
     <resources>

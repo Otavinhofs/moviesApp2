@@ -9,6 +9,7 @@ import UIKit
 
 class TvShowTableViewCell: UITableViewCell {
     @IBOutlet weak var nameTvShow: UILabel!
+    @IBOutlet weak var background: UIView!
     @IBOutlet weak var imageTvShow: UIImageView!
     @IBOutlet weak var descriptionTvShow: UILabel!
     @IBOutlet weak var totalVotes: UILabel!
@@ -17,6 +18,7 @@ class TvShowTableViewCell: UITableViewCell {
     var urlImage = "https://image.tmdb.org/t/p/w500"
 
     func configTvShowcell(_ TvShow: TvShowData) {
+        background.layer.cornerRadius = 30
         tvShowDate.text = TvShow.formatDate()
         score.text = String(TvShow.voteAverage)
         totalVotes.text = String(TvShow.voteCount)

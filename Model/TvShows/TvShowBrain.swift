@@ -32,6 +32,7 @@ struct TvShowBrain {
                 }
             }
             taskTvShow.resume()
+            
         }
     }
     

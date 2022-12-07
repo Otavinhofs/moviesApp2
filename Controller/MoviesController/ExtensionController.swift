@@ -32,6 +32,7 @@ extension UIImageView {
                 if let imageData = imageData {
                     if let loadedImage = UIImage(data: imageData) {
                         self?.image = loadedImage
+                        
                     }
                 }
                 

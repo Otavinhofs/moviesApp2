@@ -8,13 +8,17 @@
 import UIKit
 
 class TvShowViewController: UIViewController, TvShowDelegate {
+        
+    @IBOutlet weak var loaderView: UIView!
     
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var tvShowTableView: UITableView!
     var tvShowBrain = TvShowBrain()
     var tvShows: [TvShowData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showLoader()
         tvShowBrain.delegate = self
         tvShowTableView.dataSource = self
         tvShowBrain.getTvshow()
@@ -32,7 +36,19 @@ class TvShowViewController: UIViewController, TvShowDelegate {
         DispatchQueue.main.async {
             self.tvShows = tvShowData!.results 
             self.tvShowTableView.reloadData()
+            self.hideLoader()
         }
-
+    }
+    
+    func showLoader() {
+        self.loaderView.isHidden = false
+        self.loader.startAnimating()
+        self.view.isUserInteractionEnabled = false
+    }
+    
+    func hideLoader() {
+        self.loaderView.isHidden = true
+        self.loader.startAnimating()
+        self.view.isUserInteractionEnabled = true
     }
 }

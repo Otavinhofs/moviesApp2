@@ -8,12 +8,15 @@
 import UIKit
 
 class PersonViewController: UIViewController, PersonDelegate {
+    @IBOutlet weak var loaderView: UIView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var personTableView: UITableView!
     var personBrain = PersonBrain()
     var person: [PersonData] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        showLoader()
         personBrain.delegate = self
         personTableView.dataSource = self
         personTableView.delegate = self
@@ -28,8 +31,21 @@ class PersonViewController: UIViewController, PersonDelegate {
     
     func dataSucces(_ personData: PersonResults?) {
         DispatchQueue.main.async {
+            self.hideLoader()
             self.person = personData!.results
             self.personTableView.reloadData()
         }
+    }
+    
+    func showLoader() {
+        self.loaderView.isHidden = false
+        self.loader.startAnimating()
+        self.view.isUserInteractionEnabled = false
+    }
+    
+    func hideLoader() {
+        self.loaderView.isHidden = true
+        self.loader.startAnimating()
+        self.view.isUserInteractionEnabled = true
     }
 }

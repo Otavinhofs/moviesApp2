@@ -9,11 +9,14 @@ import UIKit
 
 class MoviesViewController: UIViewController, MoviesDelegate{
     
+    @IBOutlet weak var loaderView: UIView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     @IBOutlet weak var tableView: UITableView!
     var moviesBrain = MoviesBrain()
     var movies: [Movies] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        showLoader()
         moviesBrain.delegate = self
         tableView.dataSource = self
         moviesBrain.getMovies()
@@ -29,8 +32,20 @@ class MoviesViewController: UIViewController, MoviesDelegate{
         DispatchQueue.main.async {
             self.movies = moveData!.results
             self.tableView.reloadData()
+            self.hideLoader()
         }
 
+    }
+    func showLoader() {
+        self.loaderView.isHidden = false
+        self.loader.startAnimating()
+        self.view.isUserInteractionEnabled = false
+    }
+    
+    func hideLoader() {
+        self.loaderView.isHidden = true
+        self.loader.startAnimating()
+        self.view.isUserInteractionEnabled = true
     }
 
 }

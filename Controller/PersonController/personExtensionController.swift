@@ -20,9 +20,11 @@ extension PersonViewController: UITableViewDataSource {
 }
 extension PersonViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyBoard: UIStoryboard = UIStoryboard(name: "PersonMovies", bundle: nil)
-        let personMovie = storyBoard.instantiateViewController(withIdentifier: "PersonMovie") as! PersonMovieViewController
-        personMovie.personMovies = person[indexPath.row].knowFor
-        self.navigationController?.pushViewController(personMovie, animated: true)
+        if person[indexPath.row].knowFor.count != 0 {
+            let storyBoard: UIStoryboard = UIStoryboard(name: "PersonMovies", bundle: nil)
+            let personMovie = storyBoard.instantiateViewController(withIdentifier: "PersonMovie") as! PersonMovieViewController
+            personMovie.personMovies = person[indexPath.row].knowFor
+            self.navigationController?.pushViewController(personMovie, animated: true)
+        }
     }
 }
