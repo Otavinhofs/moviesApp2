@@ -154,6 +154,42 @@
 			path = PersonMovie;
 			sourceTree = "<group>";
 		};
+		0F1DB6E62941194B00EF3682 /* TvShowView */ = {
+			isa = PBXGroup;
+			children = (
+				0FFFA0DC293E6E6700353FA0 /* TvShowTableViewCell.swift */,
+				0F1DB6E32941090600EF3682 /* TvShowScreen.storyboard */,
+			);
+			path = TvShowView;
+			sourceTree = "<group>";
+		};
+		0F1DB6E72941197200EF3682 /* PersonView */ = {
+			isa = PBXGroup;
+			children = (
+				0F1DB6DE294108BC00EF3682 /* PeopleScreen.storyboard */,
+				0F0BAC1A293F8A9F00A577A7 /* PersonTableViewCell.swift */,
+			);
+			path = PersonView;
+			sourceTree = "<group>";
+		};
+		0F1DB6E82941198700EF3682 /* MovieView */ = {
+			isa = PBXGroup;
+			children = (
+				0FE5E35F293A7832008E32D2 /* MovieTableViewCell.swift */,
+				0F1DB6E1294108E000EF3682 /* MovieScreen.storyboard */,
+			);
+			path = MovieView;
+			sourceTree = "<group>";
+		};
+		0F1DB6E9294119A300EF3682 /* PersonMovieView */ = {
+			isa = PBXGroup;
+			children = (
+				0F0BAC21293FBEA400A577A7 /* PersonMovieTableViewCell.swift */,
+				0F0BAC25293FC39F00A577A7 /* PersonMovies.storyboard */,
+			);
+			path = PersonMovieView;
+			sourceTree = "<group>";
+		};
 		0FE5E334293A5DA5008E32D2 = {
 			isa = PBXGroup;
 			children = (
@@ -199,15 +235,11 @@
 		0FE5E355293A5F18008E32D2 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0F1DB6E32941090600EF3682 /* TvShowScreen.storyboard */,
-				0F1DB6E1294108E000EF3682 /* MovieScreen.storyboard */,
-				0F1DB6DE294108BC00EF3682 /* PeopleScreen.storyboard */,
 				0FE5E346293A5DA5008E32D2 /* Main.storyboard */,
-				0F0BAC25293FC39F00A577A7 /* PersonMovies.storyboard */,
-				0FE5E35F293A7832008E32D2 /* MovieTableViewCell.swift */,
-				0FFFA0DC293E6E6700353FA0 /* TvShowTableViewCell.swift */,
-				0F0BAC1A293F8A9F00A577A7 /* PersonTableViewCell.swift */,
-				0F0BAC21293FBEA400A577A7 /* PersonMovieTableViewCell.swift */,
+				0F1DB6E9294119A300EF3682 /* PersonMovieView */,
+				0F1DB6E82941198700EF3682 /* MovieView */,
+				0F1DB6E72941197200EF3682 /* PersonView */,
+				0F1DB6E62941194B00EF3682 /* TvShowView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -488,8 +520,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,8 +547,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

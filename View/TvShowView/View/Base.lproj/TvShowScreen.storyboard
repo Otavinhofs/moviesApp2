@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -13,13 +14,7 @@
             <objects>
                 <navigationController storyboardIdentifier="UINavigationController-o1x-jO-0jm" automaticallyAdjustsScrollViewInsets="NO" id="o1x-jO-0jm" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Tv Show" id="ybo-qI-wCS">
-                        <imageReference key="image" image="play.tv" catalog="system" symbolScale="large" renderingMode="hierarchical">
-                            <hierarchicalColors>
-                                <color red="0.88627099990844727" green="0.55721515417098999" blue="0.87420123815536499" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color red="0.85490751266479492" green="0.56900954246520996" blue="0.89407575130462646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color red="0.85490751266479492" green="0.56900954246520996" blue="0.89407575130462646" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </hierarchicalColors>
-                        </imageReference>
+                        <imageReference key="image" image="play.tv" catalog="system" symbolScale="large"/>
                     </tabBarItem>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="2Sn-eD-PvI">
@@ -40,7 +35,7 @@
             <objects>
                 <viewController storyboardIdentifier="TvShow" id="1rH-rK-zZl" customClass="TvShowViewController" customModule="moviesApp2" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xJa-rV-eXl">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="fJS-9Q-EYn">

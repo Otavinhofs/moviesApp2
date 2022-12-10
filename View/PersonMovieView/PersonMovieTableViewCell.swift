@@ -19,11 +19,18 @@ class PersonMovieTableViewCell: UITableViewCell {
     
     func configPersonMovieCell(_ personMovie: KnowFor?) {
         background.layer.cornerRadius = 30
-        title.text = personMovie?.title ?? ""
         descriptions.text = personMovie?.overview ?? ""
         popularity.text = String(personMovie?.popularity ?? 0)
         dateLabel.text = personMovie?.formatDate()
         votesCount.text = String(personMovie?.voteCount ?? 0)
+        title.text = personMovie?.title
+        dateLabel.text = personMovie?.formatDate()
+        if title.text == nil {
+            title.text = personMovie?.name
+        }
+        if dateLabel.text == ""{
+            dateLabel.text = personMovie?.firstDates()
+        }
         
         if personMovie?.poster != nil {
             movieImage.setImage(urlAdress: urlImage + (personMovie?.poster ?? ""))

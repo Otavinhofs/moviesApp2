@@ -21,6 +21,11 @@ class MoviesViewController: UIViewController, MoviesDelegate{
         tableView.dataSource = self
         moviesBrain.getMovies()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tabBarController?.tabBar.tintColor = .blue
+    }
+    
     func dataError(_ error: Error?) {
         let errorMenssager = UIAlertController(title: "Atenção", message: "Algo deu errado tente novamente mais tarde.", preferredStyle: .alert)
         errorMenssager.addAction(UIAlertAction(title: "fechar", style: .cancel))

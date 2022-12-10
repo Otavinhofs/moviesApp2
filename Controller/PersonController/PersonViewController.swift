@@ -23,6 +23,10 @@ class PersonViewController: UIViewController, PersonDelegate {
         personBrain.getPerson()
     }
 
+    override func viewDidAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.tintColor = .green
+    }
+    
     func dataError(_ error: Error?) {
         let errorMenssager = UIAlertController(title: "Atenção", message: "Algo deu errado tente novamente mais tarde.", preferredStyle: .alert)
         errorMenssager.addAction(UIAlertAction(title: "fechar", style: .cancel))

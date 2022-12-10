@@ -8,12 +8,15 @@
 import Foundation
 struct KnowFor: Codable {
     var title: String?
+    var name: String?
     var overview: String?
     var poster: String?
-    var popularity: Double
+    var popularity: Double?
+    var firstDate: Date?
     var releaseDate: Date?
     var voteAvarage: Double?
     var voteCount: Int?
+    
     
     func formatDate() -> String {
         let dateFormat = DateFormatter()
@@ -24,11 +27,22 @@ struct KnowFor: Codable {
             return ""
         }
     }
+    func firstDates() -> String {
+        let dateFormat = DateFormatter()
+        dateFormat.dateFormat = "dd/MM/yyyy"
+        if let firstDate = self.firstDate {
+            return dateFormat.string(from: firstDate)
+        } else {
+            return ""
+        }
+    }
     enum CodingKeys: String, CodingKey {
         case title
+        case name
         case overview
         case poster = "poster_path"
         case popularity
+        case firstDate = "first_air_date"
         case releaseDate = "release_date"
         case voteAvarage = "vote_average"
         case voteCount = "vote_count"

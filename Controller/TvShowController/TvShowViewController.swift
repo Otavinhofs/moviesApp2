@@ -24,8 +24,10 @@ class TvShowViewController: UIViewController, TvShowDelegate {
         tvShowBrain.getTvshow()
         
     }
-    
-
+    override func viewWillAppear(_ animated: Bool) {
+        self.tabBarController?.tabBar.tintColor = .systemPink
+    }
+      
     func dataError(_ error: Error?) {
         let errorMenssager = UIAlertController(title: "Atenção", message: "Algo deu errado tente novamente mais tarde.", preferredStyle: .alert)
         errorMenssager.addAction(UIAlertAction(title: "fechar", style: .cancel))
